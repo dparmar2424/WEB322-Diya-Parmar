@@ -6,13 +6,15 @@
 |                     | naming convention followed | 10      | 10    |
 |                     | branch created             | 10      | 10    |
 |                     | branch name properly       | 10      | 10    |
-| Code executes       | `node index.js`            | 20      | TBD   |
-| Light change works  |                            | 20      | TBD   |
-| Event Emitter works |                            | 20      | TBD   |
+| Code executes       | `node index.js`            | 20      | 20    |
+| Light change works  |                            | 20      | 20    |
+| Event Emitter works |                            | 20      | 20    |
 | =================== | ========================== | ======= | ===== |
-| TOTAL               |                            | 100     | TBD   |
+| TOTAL               |                            | 100     | 100   |
 
 ## Feeback
+
+Fantastic job Diya!
 
 Take a look at these solutions for other ideas.
 
