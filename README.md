@@ -17,10 +17,11 @@ Install the required packages by running:
 Running the Application:
 Start the server using:
 
--npm start OR
+-npm start OR 
 -node server.js
 
 Then, open your web browser and visit the application at the provided local URL (localhost:8080).
+
 
 Features:
 
