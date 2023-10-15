@@ -11,10 +11,12 @@ Installation:
 Download or clone the project.
 In your terminal, navigate to the project folder.
 Install the required packages by running:
+
 -npm install
 
 Running the Application:
 Start the server using:
+
 -npm start OR
 -node server.js
 
@@ -24,11 +26,13 @@ Features:
 
 The application includes:
 
+
 Login: Log in with the username "lover" and password "lover<3".
 
 List View: Shows a list of users.
 
 Detail Page: Gives detailed information about a selected user.
+
 
 Login Credentials:
 
