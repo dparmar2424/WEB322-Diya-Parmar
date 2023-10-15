@@ -25,7 +25,9 @@ Features:
 The application includes:
 
 Login: Log in with the username "lover" and password "lover<3".
+
 List View: Shows a list of users.
+
 Detail Page: Gives detailed information about a selected user.
 
 Login Credentials:
