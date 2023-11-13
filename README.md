@@ -9,13 +9,13 @@ Setup:
 Clone the repository:
 
 ```bash
-git clone https://github.com/----------
+git clone https://github.com/dparmar2424/WEB322-Diya-Parmar.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-cd ---------
+cd WEB322-Diya-Parmar
 ```
 
 Install dependencies:
