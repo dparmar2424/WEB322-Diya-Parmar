@@ -44,20 +44,6 @@ Install dependencies:
 
 bash ~ npm install
 
-# Database Configuration (optional):
-
-    Update the database configuration in config/database.js:
-
-    javascript
-
-    module.exports = {
-      dialect: 'postgres',
-      host: 'ep-wispy-star-33962533-pooler.us-east-2.aws.neon.tech',
-      database: 'SenecaDB',
-      username: 'dparmar2424',
-      password: 'tAQKydr4JwV2',
-    };
-
 # Usage
 
 How to use the project or run it locally.
