@@ -2,7 +2,8 @@
 Overview
 
 This project replaces fake data files with calls to a PostgreSQL database using Sequelize. The application includes CRUD operations for Orders, Users, and Products, providing a seamless integration with the chosen database.
-Features
+
+Features:
 
     CRUD Operations:
         Orders: Create, Read, Update, Delete orders.
