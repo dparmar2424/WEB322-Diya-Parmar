@@ -46,7 +46,8 @@ bash ~ npm install
 
 # Usage
 
-How to use the project or run it locally.
+How to use the project or run it locally:
+
 bash ~ npm start or node server.js
 
 Server Address: http://localhost:3000/
