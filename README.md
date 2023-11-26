@@ -64,7 +64,8 @@ How to use the project or run it locally.
 bash ~ npm start
 
 Server Address: http://localhost:3000/
-API Endpoints
+
+# API Endpoints
 
     GET /api/orders:
     Returns all orders from the database.
