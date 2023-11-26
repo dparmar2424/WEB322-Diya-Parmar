@@ -1,56 +1,93 @@
-Express CRUD API
+# Assignment 4
+Overview
 
-Introduction:
+This project replaces fake data files with calls to a PostgreSQL database using Sequelize. The application includes CRUD operations for Orders, Users, and Products, providing a seamless integration with the chosen database.
+Features
 
-This project represents an Express application that showcases CRUD operations through RESTful API endpoints for managing users and products. Additionally, it incorporates fundamental user authentication.
+    CRUD Operations:
+        Orders: Create, Read, Update, Delete orders.
+        Users: Create, Read, Update, Delete users.
+        Products: Create, Read, Update, Delete products.
 
-Setup:
+    Database Integration:
+        PostgreSQL with Sequelize.
 
-Clone the repository:
+    Model Objects:
+        Sequelize objects for Users, Products, and Orders.
 
-```bash
-git clone https://github.com/dparmar2424/WEB322-Diya-Parmar.git
-```
+    Relationships:
+        Establish relationships between Order, Users, and Products.
+        Bonus: Display user and product details when viewing an order.
 
-Navigate to the project directory:
+    User Orders List:
+        Bonus2: Users class contains a list of user orders in the users/:id endpoint.
 
-```bash
-cd WEB322-Diya-Parmar
-```
+Getting Started
+Prerequisites
+
+Make sure you have the following installed:
+
+    Node.js
+    PostgreSQL
+
+# Installation
+
+    Clone the repository:
+
+    bash ~
+
+git clone https://github.com/your-username/assignment-4.git
+
+Navigate to the project folder:
+
+bash ~
+
+cd assignment-4
 
 Install dependencies:
 
-```bash
-npm install
-```
+bash ~
 
-Usage:
+    npm install
 
-Start the server:
+# Database Configuration (optional):
 
-```bash
-node server.js
-```
+    Update the database configuration in config/database.js:
 
-The application will be accessible at http://localhost:3000.
+    javascript
 
-API Endpoints:
+    module.exports = {
+      dialect: 'postgres',
+      host: 'ep-wispy-star-33962533-pooler.us-east-2.aws.neon.tech',
+      database: 'SenecaDB',
+      username: 'dparmar2424',
+      password: 'tAQKydr4JwV2',
+    };
 
-Users Endpoints:
+# Usage
 
-- GET /api/users: Retrieves all users.
-- GET /api/users/:id: Retrieves a specific user by ID.
-- DELETE /api/users/:id: Removes a user by ID.
-- POST /api/users: Adds a new user.
+How to use the project or run it locally.
+bash
 
-Products Endpoints:
+# Run the project
+npm start
 
-- GET /api/products: Retrieves all products.
-- GET /api/products/:id: Retrieves a specific product by ID.
-- DELETE /api/products/:id: Removes a product by ID.
-- POST /api/products: Adds a new product.
+API Endpoints
 
-Authentication:
+    GET /api/orders:
+    Returns all orders from the database.
 
-- POST /api/login: Accepts email and password in the request body. Returns { isAuthenticated: true } if the user exists and is an admin; otherwise, returns a 401 status with { isAuthenticated: false }.
-(Note: You can use the credentials of any existing record in the fakeUsers data file to log in; simply input their details on the page.)
+    GET /api/orders/:id:
+    Returns a single order with user and product details by ID.
+
+    DELETE /api/orders/:id:
+    Deletes a single order and returns a JSON object with a success message.
+
+    POST /api/orders:
+    Adds a new order to the database and returns the new order as JSON.
+
+    GET /api/users/:id:
+    Returns a single user with order details by ID.
+
+    Other Endpoints:
+    Similar CRUD endpoints for users and products.
