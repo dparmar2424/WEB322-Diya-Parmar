@@ -24,7 +24,7 @@ Features:
         Bonus2: Users class contains a list of user orders in the users/:id endpoint.
 
 Getting Started
-Prerequisites
+(Prerequisites)
 
 Make sure you have the following installed:
 
