@@ -61,11 +61,9 @@ bash ~ npm install
 # Usage
 
 How to use the project or run it locally.
-bash
+bash ~ npm start
 
-# Run the project
-npm start
-
+Server Address: http://localhost:3000/
 API Endpoints
 
     GET /api/orders:
