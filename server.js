@@ -1,34 +1,46 @@
 const express = require("express");
+const bodyParser = require("body-parser");
+const { Sequelize } = require("sequelize");
+const { Order, User, Product } = require("./models");
 
 const app = express();
-const PORT = 8080;
-app.set('view engine', 'ejs');
+const port = 3000;
 
-app.use(express.urlencoded({ extended: true }));
-const users = require("./data/fakeUsers.json");
-
-app.get("/", (req, res) => {
-  res.render('index');
+const sequelize = new Sequelize("SenecaDB", "dparmar2424", "tAQKydr4JwV2", {
+  host: "ep-wispy-star-33962533-pooler.us-east-2.aws.neon.tech",
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: true,
+    },
+  },
+  logging: false,
 });
 
-app.post("/", (req, res) => {
-  if (req.body.username === "lover" && req.body.password === "lover<3") {
-    res.redirect("/list");
-  } else {
-    res.redirect("/");
-  }
-});
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("Connection to the database successful.");
+  })
+  .catch((err) => {
+    console.error("Unable to connect to database:", err);
+  });
 
-app.get("/list", (req, res) => {
-  res.render('list', { users: users.slice(0, 25) });
-});
+sequelize.sync();
 
-app.get("/detail/:id", (req, res) => {
-  const id = req.params.id;
-  const user = users.find((user) => user.id == id);
-  res.render('detail', { user: user });
-});
+app.set("view engine", "ejs");
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+app.use(bodyParser.json());
+
+const pageRoutes = require("./routes/page.routes");
+const apiRoutes = require("./routes/api.routes");
+
+const models = { Order, User, Product };
+
+app.use("/", pageRoutes);
+app.use("/api", apiRoutes(models));
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
