@@ -34,22 +34,15 @@ Make sure you have the following installed:
 # Installation
 
     Clone the repository:
-
-    bash ~
-
-git clone https://github.com/your-username/assignment-4.git
+ bash ~ git clone https://github.com/your-username/assignment-4.git](https://github.com/dparmar2424/WEB322-Diya-Parmar
 
 Navigate to the project folder:
 
-bash ~
-
-cd assignment-4
+bash ~ cd WEB322-Diya-Parmar
 
 Install dependencies:
 
-bash ~
-
-    npm install
+bash ~ npm install
 
 # Database Configuration (optional):
 
