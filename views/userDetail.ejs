@@ -19,27 +19,6 @@
         <p>Phone: <%= user.phone %></p>
     </div>
 
-    <div>
-        <h2>User Orders</h2>
-        <% if (user.Orders && user.Orders.length > 0) { %>
-            <table class='table'>
-                <thead>
-                    <th>Order ID</th>
-                    <th>Product ID</th>
-                </thead>
-                <tbody>
-                    <% user.Orders.forEach(function(order) { %>
-                        <tr>
-                            <td><%= order.id %></td>
-                            <td><%= order.ProductId %></td>
-                        </tr>
-                    <% }); %>
-                </tbody>
-            </table>
-        <% } else { %>
-            <p>No orders for this user.</p>
-        <% } %>
-    </div>
 </body>
 
 </html>
