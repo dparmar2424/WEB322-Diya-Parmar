@@ -8,10 +8,10 @@
 
 <body class="container">
     <%- include('partials/topnav.ejs') %>
-    <h1  class="text-center">Product Detail</h1>
+    <h1  class="text-center">Product Details</h1>
     <div>
-        <h2><%= product.name %></h2>
         <p>ID: <%= product.id %></p>
+        <p>Name: <%= product.name %></p>
         <p>ISBN: <%= product.isbn %></p>
         <p>Price: $<%= product.price %></p>
         <p>Description: <%= product.description %></p>
