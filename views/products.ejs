@@ -1,33 +1,29 @@
-<!-- list.ejs -->
+<!-- product.ejs -->
 <html>
 
 <head>
     <%- include('partials/head.ejs') %>
+    <title>Products</title>
 </head>
 
 <body class="container">
     <%- include('partials/topnav.ejs') %>
     <h1>
-        List
+        Product List
     </h1>
     <table class='table'>
         <thead>
             <th>Id</th>
             <th>Name</th>
-            <th>Email</th>
         </thead>
         <tbody>
-            <% users.forEach(function(user) { %>
+            <% products.forEach(function(product) { %>
                 <tr>
-                    <td><a href="/detail/<%= user.id %>">
-                            <%= user.id %>
+                    <td><a href="/products/<%= product.id %>">
+                            <%= product.id %>
                         </a></td>
                     <td>
-                        <%= user.firstName %>
-                            <%= user.lastName %>
-                    </td>
-                    <td>
-                        <%= user.email %>
+                        <%= product.name %>
                     </td>
                 </tr>
                 <% }); %>
@@ -36,18 +32,18 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item">
-                <a class="page-link" href="/list?page=<%= page - 1 %>" aria-label="Previous">
+                <a class="page-link" href="/products?page=<%= page - 1 %>" aria-label="Previous">
                     <span aria-hidden="true">&laquo; Previous</span>
                 </a>
             </li>
             <li class="page-item">
-                <a class="page-link" href="/list?page=<%= page + 1%>" aria-label="Next">
+                <a class="page-link" href="/products?page=<%= page + 1%>" aria-label="Next">
                     <span aria-hidden="true">Next &raquo;</span>
                 </a>
             </li>
         </ul>
     </nav>
-        </div>
+    </div>
 </body>
 
 </html>
